@@ -52,6 +52,12 @@ body
     text-align: center;
     
 }
+.fb
+{
+    text-align:center;
+    margin-left:95%;
+}
+
 
 
 #contenu_story
@@ -142,12 +148,12 @@ body
 #footer 
 {
 
-    margin-top: 10%;
+    margin-top: 8%;
     /* border: 1px yellow solid; */
     text-align: center;
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-
+ //   width: 40%;
+  //background-image: url('images/bg_alpha.png');
 }
