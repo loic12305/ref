@@ -104,13 +104,13 @@ body
 #thumbs a {
     width:auto;
     height:auto;
-    margin:0 0 5px 5px;
+    margin:0 0 1% 1%;//5px 5px;
     
 }
 
 #thumbs a img {
-    width:60px;
-    height:60px;
+    width:6%;
+    height:10%;
     border:0;
 }
 
