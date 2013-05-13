@@ -5,7 +5,7 @@
 	CONFIGURATION
 	********************************************************************************************
 */
-// destinataire est votre adresse mail. Pour envoyer à plusieurs à la fois, séparez-les par une virgule
+// destinataire est votre adresse mail. Pour envoyer &agrave; plusieurs &agrave; la fois, s&eacute;parez-les par une virgule
 $destinataire = 'admin@lesrillettesenfut.fr';
  
 // copie ? (envoie une copie au visiteur)
@@ -13,11 +13,11 @@ $copie = 'oui'; // 'oui' ou 'non'
  
 // Messages de confirmation du mail
 $message_envoye = "Votre message nous est bien parvenu !";
-$message_non_envoye = "L'envoi du mail a échoué, veuillez réessayer SVP.";
+$message_non_envoye = "L'envoi du mail a &eacute;chou&eacute;, veuillez r&eacute;essayer SVP.";
  
 // Messages d'erreur du formulaire
-$message_erreur_formulaire = "Vous devez d'abord <a href=\"contact.html\">envoyer le formulaire</a>.";
-$message_formulaire_invalide = "Vérifiez que tous les champs soient bien remplis et que l'email soit sans erreur.";
+$message_erreur_formulaire = "Vous devez d'abord <a href=\"index.html\">envoyer le formulaire</a>.";
+$message_formulaire_invalide = "V&eacute;rifiez que tous les champs soient bien remplis et que l'email soit sans erreur.";
  
 /*
 	********************************************************************************************
@@ -25,16 +25,16 @@ $message_formulaire_invalide = "Vérifiez que tous les champs soient bien rempli
 	********************************************************************************************
 */
  
-// on teste si le formulaire a été soumis
+// on teste si le formulaire a &eacute;t&eacute; soumis
 if (!isset($_POST['envoi']))
 {
-	// formulaire non envoyé
+	// formulaire non envoy&eacute;
 	echo '<p>'.$message_erreur_formulaire.'</p>'."\n";
 }
 else
 {
 	/*
-	 * cette fonction sert à nettoyer et enregistrer un texte
+	 * cette fonction sert &agrave; nettoyer et enregistrer un texte
 	 */
 	function Rec($text)
 	{
@@ -49,7 +49,7 @@ else
 	};
  
 	/*
-	 * Cette fonction sert à vérifier la syntaxe d'un email
+	 * Cette fonction sert &agrave; v&eacute;rifier la syntaxe d'un email
 	 */
 	function IsEmail($email)
 	{
@@ -57,7 +57,7 @@ else
 		return (($value === 0) || ($value === false)) ? false : true;
 	}
  
-	// formulaire envoyé, on récupère tous les champs.
+	// formulaire envoy&eacute;, on r&eacute;cup&egrave;re tous les champs.
 	$nom     = (isset($_POST['nom']))     ? Rec($_POST['nom'])     : '';
 	$prenom     = (isset($_POST['prenom']))     ? Rec($_POST['prenom'])     : '';
 	$tel     = $_POST['phone'];
@@ -67,11 +67,11 @@ else
 	$message = $message."
 email : ".$email." tel : ".$tel;
 
-	$email = (IsEmail($email)) ? $email : ''; // soit l'email est vide si erroné, soit il vaut l'email entré
+	$email = (IsEmail($email)) ? $email : ''; // soit l'email est vide si erron&eacute;, soit il vaut l'email entr&eacute;
 
 	if (($nom != '') && ($email != '') && ($objet != '') && ($message != ''))
 	{
-		// les 4 variables sont remplies, on génère puis envoie le mail
+		// les 4 variables sont remplies, on g&eacute;n&egrave;re puis envoie le mail
 		$headers  = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'From:'.$nom.' '.$prenom.' <'.$email.'>' . "\r\n" .
 					'Reply-To:'.$email. "\r\n" .
@@ -87,7 +87,7 @@ email : ".$email." tel : ".$tel;
 			$cible = $destinataire;
 		};
  
-		// Remplacement de certains caractères spéciaux
+		// Remplacement de certains caract&egrave;res sp&eacute;ciaux
 		$message = str_replace("&#039;","'",$message);
 		$message = str_replace("&#8217;","'",$message);
 		$message = str_replace("&quot;",'"',$message);
@@ -113,7 +113,7 @@ email : ".$email." tel : ".$tel;
 	else
 	{
 		// une des 3 variables (ou plus) est vide ...
-		echo '<p>'.$message_formulaire_invalide.' <a href="contact.html">Retour au formulaire</a></p>'."\n";
+		echo '<p>'.$message_formulaire_invalide.' <a href="index.html">Retour au formulaire</a></p>'."\n";
 	};
 }; // fin du if (!isset($_POST['envoi']))
 

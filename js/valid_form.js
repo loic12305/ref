@@ -11,11 +11,13 @@ function valider(){
 	return false;   
     }   
 
-    if(formContact.mail.value == '') {   
+    if(formContact.email.value == '') {   
 	alert('Merci de saisir votre adresse e-mail');   
-	formContact.mail.focus();   
+	formContact.email.focus();   
 	return false;   
     }
+    
+    
 
     
     ///// un exemple pour tester le numéro de tel   
