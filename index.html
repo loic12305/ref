@@ -25,10 +25,10 @@
       <!-- ################## -->
       <div id="hmenu">
         <ul>
-	  <li><button onclick="decache('contenu_home');" class="btn btn-large" type="button"/>Home</button></li>	
-	<li><button onclick="decache('contenu_story');" class="btn btn-large" type="button">Story</button></li>
-	<li><button onclick="decache('contenu_gallery');" class="btn btn-large" type="button">Gallery</button></li>	
-	<li><button onclick="decache('contenu_contact');" class="btn btn-large" type="button">Contact</button></li>	
+	  <li><button onclick="display_content('contenu_home');" class="btn btn-large" type="button"/>Acceuil</button></li>	
+	<li><button onclick="display_content('contenu_story');" class="btn btn-large" type="button">Notre histoire</button></li>
+	<li><button onclick="display_content('contenu_gallery');" class="btn btn-large" type="button">Nos photos</button></li>	
+	<li><button onclick="display_content('contenu_contact');" class="btn btn-large" type="button">Nous contacter</button></li>	
       </ul>
     </div>
     <!-- ################## -->
@@ -149,7 +149,7 @@
     </div>
 
     <script>
-      decache('contenu_home');
+      display_content('contenu_home');
     </script>  
   </body>
 </html>
