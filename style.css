@@ -52,14 +52,17 @@ body
     text-align: center;
     
 }
-/* .fb-like */
-/* { */
-/*     text-align:center; */
-/*     margin-right:95%; */
-/* } */
+
+
+.fblike
+{
+    text-align:center;
+    margin-right:95%;
+}
 
 .fb
 {
+    
     text-align:center;
     margin-left:95%;
 }
