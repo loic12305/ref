@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="fr-FR">
+<html itemscope itemtype="http://schema.org/Organization" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="fr-FR">
   <head>
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Le site des Rillettes en Fut" />
@@ -8,6 +8,9 @@
     <meta property="fb:admins" content="1220186524" />
     <meta property="og:image" content="http://lesrillettesenfut.fr/images/logo.png" />
 	
+	<meta itemprop="name" content="Les Rillettes en Fût">
+	<meta itemprop="description" content="Le site officiel de la fanfare les Rillettes en Fût du Mans">
+	<meta itemprop="image" content="http://lesrillettesenfut.fr/images/logo.png">
 
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="icon" type="image/gif" href="images/animated_favicon1.gif"/>
@@ -24,12 +27,12 @@
     <script type="text/javascript" src="js/navigation.js"></script>  
     <script type="text/javascript" src="js/display_picture.js"></script>  
   </head>
-  <body> 
+  <body onload="document.getElementsByTagName('body')[0].style.display = 'block';" style="display:none;">
     <!--[if IE ]>
 	<script>
 	  window.location = "http://lesrillettesenfut.fr/ie.html";
 	</script>
-<![endif]-->
+	<![endif]-->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
