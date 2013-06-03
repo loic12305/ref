@@ -7,11 +7,15 @@
     <meta property="og:description" content="Le site officiel de la fanfare les Rillettes en Fût" />
     <meta property="fb:admins" content="1220186524" />
     <meta property="og:image" content="http://lesrillettesenfut.fr/images/logo.png" />
-	
-	<meta itemprop="name" content="Les Rillettes en Fût">
-	<meta itemprop="description" content="Le site officiel de la fanfare les Rillettes en Fût du Mans">
-	<meta itemprop="image" content="http://lesrillettesenfut.fr/images/logo.png">
-
+    
+    <meta name="description" content="Le site officiel de la fanfare les Rillettes en Fût"/>
+    <meta name="keywords" content="fanfare, rillettes, en, fut, fanfare les rillettes en fut, bellevue, lycée, joel bodereau, musique, rose"/>
+    <meta name="author" content="Loïc ENTRESSANGLE"/>
+    <meta charset="UTF-8"/>
+    <meta itemprop="name" content="Les Rillettes en Fût"/>
+    <meta itemprop="description" content="Le site officiel de la fanfare les Rillettes en Fût du Mans"/>
+    <meta itemprop="image" content="http://lesrillettesenfut.fr/images/logo.png"/>
+    
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="icon" type="image/gif" href="images/animated_favicon1.gif"/>
     <link rel="stylesheet" href="style.css" />
@@ -33,22 +37,24 @@
 	  window.location = "http://lesrillettesenfut.fr/ie.html";
 	</script>
 	<![endif]-->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
     <div id="pageCenter">
       <!-- ################## -->
       <div id="hmenu">
-        <ul>
+	<ul>
 	  <li><button onclick="display_content('contenu_home');" class="btn btn-large" type="button" >Accueil</button></li>	
 	  <li><button onclick="display_content('contenu_story');" class="btn btn-large" type="button" >Notre histoire</button></li>
 	  <li><button onclick="display_content('contenu_gallery');" class="btn btn-large" type="button">Nos photos</button></li>	
+	  <li><button onclick="display_content('contenu_video');" class="btn btn-large" type="button">Nos vidéos</button></li>	
 	  <li><button onclick="display_content('contenu_contact');" class="btn btn-large" type="button">Nous contacter</button></li>	
+
 	</ul>
       </div>
       <!-- ################## -->
@@ -103,14 +109,19 @@
        	    <img src="images/gallery/11.JPG" alt="11"/></a>
 	  <a href="#nogo" onmouseover="display_photo(12)" onmouseout="">
        	    <img src="images/gallery/12.JPG" alt="12"/></a>
-
-
-	</div>
+	</div>      
 	<div id="apercu">
 	  <img id="photo_grande" src="images/gallery/1.JPG"/>
 	</div>
       </div>
       <!-- ################## -->
+      <div id="contenu_video">
+	<iframe width="560" height="315" src="http://www.youtube.com/embed/ZPHoD9hc0n8" frameborder="0" allowfullscreen></iframe>
+	<br/>
+	<iframe width="560" height="315" src="http://www.youtube.com/embed/Tfc_MzvCYlM" frameborder="0" allowfullscreen></iframe>
+	<br/>
+	<iframe width="560" height="315" src="http://www.youtube.com/embed/89-oawPaO98" frameborder="0" allowfullscreen></iframe>
+      </div>
       <!-- ################## -->
       <div id="contenu_contact">
 	<center>
@@ -154,26 +165,26 @@
 
 	      <!-- TEXTAREA -->
 	      <textarea rows="10" cols="200" name="message"></textarea>
-	    </br>
-	    <button type="submit"  name="envoi" class="btn">Envoyer</button>
-	  </fieldset>
-	</form><br/>
-	<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/LesRillettesEnFut?fref=ts"
-		scrolling="no" frameborder="0"
-		style="border:none; width:450px; height:80px"></iframe>
-	<br/> 
-      </center>
-    </div>
-    <!-- ################## -->
-    <div id="footer">
-      <small><strong>Les Rillettes en Fût &#169; 2013<strong></small>
-	</div>
-	<!-- ################## -->
-
+	      <br/>
+	      <button type="submit"  name="envoi" class="btn">Envoyer</button>
+	    </fieldset>
+	  </form><br/>
+	  <iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/LesRillettesEnFut?fref=ts"
+		  scrolling="no" frameborder="0"
+		  style="border:none; width:450px; height:80px"></iframe>
+	  <br/> 
+	</center>
       </div>
+      <!-- ################## -->
+      <div id="footer">
+	<small><strong>Les Rillettes en Fût &#169; 2013</strong><br/><a href="http://www.hannuaire.fr/" title="Annuaire référencement gratuit">Site inscrit dans l'Hannuaire</a></small>
+      </div>
+      <!-- ################## -->
+      
+    </div>
 
-      <script>
-	display_content('contenu_home');
-      </script>  
-    </body>
-  </html>
+    <script>
+      display_content('contenu_home');
+    </script>  
+  </body>
+</html>
