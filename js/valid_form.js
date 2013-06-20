@@ -44,9 +44,9 @@ function valider(){
 	}  
     }  
 
-    if (formContact.texte.value==""){   
+    if (formContact.message.value==""){   
 	alert("Rentrez un texte");   
-	formContact.texte.focus();   
+	formContact.message.focus();   
 	return false;   
     }   
     //// fin test teleph   
