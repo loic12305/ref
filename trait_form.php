@@ -6,7 +6,7 @@
 	********************************************************************************************
 */
 // destinataire est votre adresse mail. Pour envoyer &agrave; plusieurs &agrave; la fois, s&eacute;parez-les par une virgule
-$destinataire = 'admin@lesrillettesenfut.fr';
+$destinataire = 'loic@lesrillettesenfut.fr';
  
 // copie ? (envoie une copie au visiteur)
 $copie = 'oui'; // 'oui' ou 'non'
