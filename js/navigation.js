@@ -5,8 +5,8 @@ function display_content(content)
     document.getElementById('contenu_gallery').style.display='none';
     document.getElementById('contenu_contact').style.display='none';
     document.getElementById('contenu_video').style.display='none';
-
-    new Effect.Appear(document.getElementById(content));
-    
-    
+   
+    document.getElementById(content).style.opacity='0';
+    document.getElementById(content).style.display='block';
+    $("#"+content).animate({opacity : 1},1000)
 }
