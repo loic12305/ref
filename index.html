@@ -33,7 +33,14 @@
     <script type="text/javascript" src="js/display_picture.js"></script>
   </head>
 
-  <body onload="document.getElementsByTagName('body')[0].style.display = 'block';" style="display:none;">
+  <body onload="document.getElementsByTagName('body')[0].style.display = 'block'; showPopOver('pop1');" style="display:none;">
+    <span class="dtstart">
+      <div class="vcard" style="display:none">
+	<img class="photo" src="images/logo.png" />
+	<strong class="fn">Les Rillettes en Fût</strong>
+	<span class="title">Fanfare</span> du <span class="org">Mans</span>
+      </div> 
+    </span>
     <!--[if IE ]>
 	<script>
 	  window.location = "http://lesrillettesenfut.fr/ie.html";

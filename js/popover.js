@@ -1,4 +1,3 @@
-<<<<<<< .mine
 // SHOW POP-OVER
 function showPopOver(divID) {
     //on le centre
@@ -26,5 +25,4 @@ function closePopOver(divID) {
     
     //Jquery pour animé
     $('#pageCenter').animate({opacity: 1}, 500);
-
 }
