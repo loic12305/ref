@@ -41,6 +41,14 @@
 	<span class="title">Fanfare</span> du <span class="org">Mans</span>
       </div> 
     </span>
+
+    <!-------------------->
+    <!-- PopOverPicture -->
+    <!-------------------->
+    <input type="hidden" name="popOverPictureOpen" value="false"/>
+    <div id='popOverPicture' class='pop_over' align='center'>
+      [:popOverPicture]
+    </div>
     <!--[if IE ]>
 	<script>
 	  window.location = "http://lesrillettesenfut.fr/ie.html";
@@ -55,6 +63,7 @@
       fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
+
     <!-- ######### popover en dehors de page center######### -->
     <div id="pop1" class="pop_over" align="center">
       <ul>
@@ -107,108 +116,108 @@
       </div>
       <!-- ################## -->
       <div id="contenu_gallery">
-	<b>Survolez les photos</b>
+	<b>Survolez ou cliquez sur les photos</b>
 	<div id="thumbs">
-	  <a href="#nogo" onmouseover="display_photo(1)">
+	  <a href="#nogo" onmouseover="display_photo(1)" onclick="buildPopOverPicture(1)">
        	    <img src="images/gallery/1.jpg" alt="1"/></a>
-	  <a href="#nogo" onmouseover="display_photo(2)">
+	  <a href="#nogo" onmouseover="display_photo(2)" onclick="buildPopOverPicture(2)">
        	    <img src="images/gallery/2.jpg" alt="2"/></a>
-	  <a href="#nogo" onmouseover="display_photo(3)">
+	  <a href="#nogo" onmouseover="display_photo(3)" onclick="buildPopOverPicture(3)">
        	    <img src="images/gallery/3.jpg" alt="3"/></a>
-	  <a href="#nogo" onmouseover="display_photo(4)">
+	  <a href="#nogo" onmouseover="display_photo(4)" onclick="buildPopOverPicture(4)">
        	    <img src="images/gallery/4.jpg" alt="4"/></a>
-	  <a href="#nogo" onmouseover="display_photo(5)">
+	  <a href="#nogo" onmouseover="display_photo(5)" onclick="buildPopOverPicture(5)">
        	    <img src="images/gallery/5.jpg" alt="5"/></a>
-	  <a href="#nogo" onmouseover="display_photo(6)">
+	  <a href="#nogo" onmouseover="display_photo(6)" onclick="buildPopOverPicture(6)">
        	    <img src="images/gallery/6.jpg" alt="6"/></a>
-	  <a href="#nogo" onmouseover="display_photo(7)">
+	  <a href="#nogo" onmouseover="display_photo(7)" onclick="buildPopOverPicture(7)">
        	    <img src="images/gallery/7.jpg" alt="7"/></a>
-	  <a href="#nogo" onmouseover="display_photo(8)">
+	  <a href="#nogo" onmouseover="display_photo(8)" onclick="buildPopOverPicture(8)">
        	    <img src="images/gallery/8.jpg" alt="8"/></a>
-	  <a href="#nogo" onmouseover="display_photo(9)">
+	  <a href="#nogo" onmouseover="display_photo(9)" onclick="buildPopOverPicture(9)">
        	    <img src="images/gallery/9.jpg" alt="9"/></a>
-	  <a href="#nogo" onmouseover="display_photo(10)">
+	  <a href="#nogo" onmouseover="display_photo(10)" onclick="buildPopOverPicture(10)">
        	    <img src="images/gallery/10.jpg" alt="10"/></a>
-	  <a href="#nogo" onmouseover="display_photo(11)">
+	  <a href="#nogo" onmouseover="display_photo(11)" onclick="buildPopOverPicture(11)">
        	    <img src="images/gallery/11.jpg" alt="11"/></a>
-	  <a href="#nogo" onmouseover="display_photo(12)">
+	  <a href="#nogo" onmouseover="display_photo(12)" onclick="buildPopOverPicture(12)">
        	    <img src="images/gallery/12.jpg" alt="12"/></a>
 	</div>... et bien d'autres sur notre <a href="https://www.facebook.com/LesRillettesEnFut"><b>Facebook</b></a>      
 	<div id="apercu">
 	  <img id="photo_grande" src="images/gallery/1.jpg"/>
-      </div>
-    </div>
-    <!-- ################## -->
-    <div id="contenu_video">
-      <object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/ZPHoD9hc0n8?hl=fr_FR&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/ZPHoD9hc0n8?hl=fr_FR&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
-
-      <br/>
-      <object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/Tfc_MzvCYlM?hl=fr_FR&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Tfc_MzvCYlM?hl=fr_FR&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
-      <br/>
-      <object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/89-oawPaO98?hl=fr_FR&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/89-oawPaO98?hl=fr_FR&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
-    </div>
-    <!-- ################## -->
-    <div id="contenu_contact">
-      <center>
-	<form name="formContact"method="post" onsubmit="return valider();" action="trait_form.php">
-	  <fieldset>
-	    <legend>Nous contacter</legend>
-	    <!-- Nom -->
-	    <label class="control-label" for="inputIcon">Nom</label>
-	    <div class="controls">
-	      <div class="input-prepend">
-		<span class="add-on"><i class="icon-user"></i></span>
-		<input class="span2" name="nom" type="text" placeholder="Votre nom"/>
-	      </div>
-	    </div>
-
-	    <!-- Prenom -->
-	    <label class="control-label" for="inputIcon">Prénom</label>
-	    <div class="controls">
-	      <div class="input-prepend">
-		<span class="add-on"><i class="icon-user"></i></span>
-		<input class="span2" name="prenom" type="text" placeholder="Votre prénom"/>
-	      </div>
-	    </div>
-	    <!-- EMAIL -->
-	    <label class="control-label" for="inputIcon">Adresse email</label>
-	    <div class="controls">
-	      <div class="input-prepend">
-		<span class="add-on"><i class="icon-envelope"></i></span>
-		<input class="span2" name="email" type="text" placeholder="Votre Email"/>
-	      </div>
-	    </div>
-	    <!-- TELEPHONE -->
-	    <label class="control-label" for="inputIcon">Téléphone</label>
-	    <div class="controls">
-	      <div class="input-prepend">
-		<span class="add-on"><i class="icon-phone"></i></span>
-		<input class="span2" name="phone" type="text" placeholder="Votre numéro de téléphone"/>
-	      </div>
-	    </div>
-
-	    <!-- TEXTAREA -->
-	    <textarea rows="10" cols="200" name="message"></textarea>
-	    <br/>
-	    <button type="submit"  name="envoi" class="btn">Envoyer</button>
-	  </fieldset>
-	</form><br/>
-	<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/LesRillettesEnFut?fref=ts"
-		scrolling="no" frameborder="0"
-		style="border:none; width:450px; height:80px"></iframe>
-	<br/> 
-      </center>
-    </div>
-    <!-- ################## -->
-    <div id="footer">
-      <small><strong>Les Rillettes en Fût &#169; 2013</strong><!-- <br/><a href="http://www.hannuaire.fr/" title="Annuaire référencement gratuit">Site inscrit dans l'Hannuaire</a></small> -->
+	</div>
       </div>
       <!-- ################## -->
-      
-    </div>
+      <div id="contenu_video">
+	<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/ZPHoD9hc0n8?hl=fr_FR&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/ZPHoD9hc0n8?hl=fr_FR&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
-    <script>
-      display_content('contenu_home');
-    </script>  
-  </body>
-</html>
+	<br/>
+	<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/Tfc_MzvCYlM?hl=fr_FR&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/Tfc_MzvCYlM?hl=fr_FR&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+	<br/>
+	<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/89-oawPaO98?hl=fr_FR&amp;version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/89-oawPaO98?hl=fr_FR&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+      </div>
+      <!-- ################## -->
+      <div id="contenu_contact">
+	<center>
+	  <form name="formContact"method="post" onsubmit="return valider();" action="trait_form.php">
+	    <fieldset>
+	      <legend>Nous contacter</legend>
+	      <!-- Nom -->
+	      <label class="control-label" for="inputIcon">Nom</label>
+	      <div class="controls">
+		<div class="input-prepend">
+		  <span class="add-on"><i class="icon-user"></i></span>
+		  <input class="span2" name="nom" type="text" placeholder="Votre nom"/>
+		</div>
+	      </div>
+
+	      <!-- Prenom -->
+	      <label class="control-label" for="inputIcon">Prénom</label>
+	      <div class="controls">
+		<div class="input-prepend">
+		  <span class="add-on"><i class="icon-user"></i></span>
+		  <input class="span2" name="prenom" type="text" placeholder="Votre prénom"/>
+		</div>
+	      </div>
+	      <!-- EMAIL -->
+	      <label class="control-label" for="inputIcon">Adresse email</label>
+	      <div class="controls">
+		<div class="input-prepend">
+		  <span class="add-on"><i class="icon-envelope"></i></span>
+		  <input class="span2" name="email" type="text" placeholder="Votre Email"/>
+		</div>
+	      </div>
+	      <!-- TELEPHONE -->
+	      <label class="control-label" for="inputIcon">Téléphone</label>
+	      <div class="controls">
+		<div class="input-prepend">
+		  <span class="add-on"><i class="icon-phone"></i></span>
+		  <input class="span2" name="phone" type="text" placeholder="Votre numéro de téléphone"/>
+		</div>
+	      </div>
+
+	      <!-- TEXTAREA -->
+	      <textarea rows="10" cols="200" name="message"></textarea>
+	      <br/>
+	      <button type="submit"  name="envoi" class="btn">Envoyer</button>
+	    </fieldset>
+	  </form><br/>
+	  <iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/LesRillettesEnFut?fref=ts"
+		  scrolling="no" frameborder="0"
+		  style="border:none; width:450px; height:80px"></iframe>
+	  <br/> 
+	</center>
+      </div>
+      <!-- ################## -->
+      <div id="footer">
+	<small><strong>Les Rillettes en Fût &#169; 2013</strong><!-- <br/><a href="http://www.hannuaire.fr/" title="Annuaire référencement gratuit">Site inscrit dans l'Hannuaire</a></small> -->
+	</div>
+	<!-- ################## -->
+	
+      </div>
+
+      <script>
+	display_content('contenu_home');
+      </script>  
+    </body>
+  </html>

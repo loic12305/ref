@@ -1,4 +1,6 @@
-// SHOW POP-OVER
+////////////////////////////////////////////
+// affiche de maniere animee une popOver  //
+////////////////////////////////////////////
 function showPopOver(divID) {
     //on le centre
     document.getElementById(divID).style.left = "50%";
@@ -18,11 +20,31 @@ function showPopOver(divID) {
     $('#pageCenter').animate({opacity: 0.5}, 500);
 }
 
-// CLOSE POP-OVER
+/////////////////////////////////////////
+// ferme de maniere animee une popOver //
+/////////////////////////////////////////
 function closePopOver(divID) {
-    // HIDE THE DIV
+    // cache la popover
     document.getElementById(divID).style.display = "none";
-    
     //Jquery pour animé
-    $('#pageCenter').animate({opacity: 1}, 500);
+    $('#pageCenter').animate({opacity: 1}, 500); 
+
+    // si un popOver d'image est ouverte, on la ferme
+    var open = document.getElementsByName("popOverPictureOpen")[0].value;
+    if(open){
+	document.getElementById('popOverPicture').innerHTML = "";
+        document.getElementsByName("popOverPictureOpen")[0].value = false;
+    }
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////
+// ajoute le code necessaire à popOverPicture.html pour afficher la photo cliquee //
+////////////////////////////////////////////////////////////////////////////////////
+function buildPopOverPicture(num){
+    var pop = "<img src='images/gallery/"+num+".jpg' alt='"+num+"'/><br/><br/><a href=\"javascript:closePopOver('popOverPicture');\" class='icon-remove'>FERMER</a>"
+    document.getElementById('popOverPicture').innerHTML = pop;
+    document.getElementsByName("popOverPictureOpen")[0].value = true;
+    showPopOver('popOverPicture');
 }
