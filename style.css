@@ -80,12 +80,17 @@ body
 
 .fb
 {
-    
-    text-align:center;
+     text-align:center;
     margin-left:95%;
 }
 
-
+.twitter
+{
+    margin-top:1%;
+    float:left;
+    text-align:left;
+    width: auto;
+}
 
 #contenu_story
 {
