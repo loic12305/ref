@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html itemscope itemtype="http://schema.org/Organization" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="fr-FR">
   <head>
+    <!-- META FACEBOOK -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Le site des Rillettes en Fut" />
     <meta property="og:url" content="http://lesrillettesenfut.fr" />
     <meta property="og:description" content="Le site officiel de la fanfare les Rillettes en Fût" />
     <meta property="fb:admins" content="1220186524" />
     <meta property="og:image" content="http://lesrillettesenfut.fr/images/logo.png" />
-    
     <meta name="description" content="Le site officiel de la fanfare les Rillettes en Fût"/>
     <meta name="keywords" content="fanfare, rillettes, en, fut, fanfare les rillettes en fut, bellevue, fanfare du lycee bellevue, le mans ,lycée, joel bodereau, musique, rose"/>
     <meta name="author" content="Loïc ENTRESSANGLE"/>
@@ -16,6 +16,7 @@
     <meta itemprop="description" content="Le site officiel de la fanfare les Rillettes en Fût du Mans"/>
     <meta itemprop="image" content="http://lesrillettesenfut.fr/images/logo.png"/>
     <meta name="viewport" content="width=device-width"/>    
+    <!-- LINKS -->
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="icon" type="image/gif" href="images/animated_favicon1.gif"/>
     <link rel="stylesheet" href="style.css" />
@@ -23,14 +24,21 @@
     <link rel="stylesheet" href="FAFA/css/font-awesome.min.css"/>	
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <title>Les Rillettes en Fût</title>
-
-
+   
+    <!-- SCRIPTS -->
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/valid_form.js"></script>
     <script type="text/javascript" src="js/navigation.js"></script>
     <script type="text/javascript" src="js/popover.js"></script>
     <script type="text/javascript" src="js/display_picture.js"></script>
+    <script> 
+      <!-- INSERT DATES'S FILE FOR UPDATE -->
+    $(function(){
+      $("#pop1").load("date.html"); 
+    });
+    </script> 
+
+    <title>Les Rillettes en Fût</title>
   </head>
 
   <body onload="document.getElementsByTagName('body')[0].style.display = 'block'; showPopOver('pop1');" style="display:none;">
@@ -66,13 +74,6 @@
 
     <!-- ######### popover en dehors de page center######### -->
     <div id="pop1" class="pop_over" align="center">
-      <ul>
-	<li>La fanfare sevira à Royan du <b>14 au 21 août</b></li>	
-	<li>Le mercredi <b>28 août 2013</b> : Place de la République au Mans</li>
-	<li>Le <b>14 septembre</b> au centre des expositions du Mans</li>
-      </ul>
-      <br/><br/>
-      <a href="javascript:closePopOver('pop1');" class="icon-remove">FERMER</a>
     </div>
     <!-- ################## -->
 
